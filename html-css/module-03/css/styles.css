@@ -8,6 +8,7 @@
     background: url("../img/page-bg.png") no-repeat;
     background-size: cover;
     padding-top: 240px;
+    padding-bottom: 540px;
 }
 
 .wrapper {
@@ -63,6 +64,12 @@ li {
     margin-bottom: 55px;
 }
 
+.line {
+    width: 400px;
+    height: 1px;
+    background-color: #263555;
+}
+
 .list-right, .list-left {
     display: inline-block;
     vertical-align: top;
@@ -74,3 +81,4 @@ p {
     font-family: Arial;
     font-size: 12px;
 }
+
