@@ -1,8 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Pathway Gothic One';
-    font-size: 12px;
     font-style: normal;
 }
 
@@ -23,6 +21,7 @@
 h2 {
     margin-top: 55px;
     margin-bottom: 30px;
+    font-family: 'Pathway Gothic One';
     font-size: 25px;
     color: #263555;
 }
@@ -34,6 +33,7 @@ h2:first-child {
 h3 {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: Arial;
     font-size: 14px;
     color: #263555;
 }
@@ -51,6 +51,11 @@ li {
 
 .inline {
     display: inline-block;
+    margin-top: 20px;
+}
+
+.inline h3 {
+    margin: 0;
 }
 
 .wraper_principles {
@@ -61,10 +66,11 @@ li {
 .list-right, .list-left {
     display: inline-block;
     vertical-align: top;
-    width: 180px;
-    font-size: 14px;
+    width: 190px;
 }
 
 p {
     color: #4e5050;
+    font-family: Arial;
+    font-size: 12px;
 }
