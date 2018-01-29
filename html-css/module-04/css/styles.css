@@ -30,9 +30,7 @@
     height: 280px;
     width: 360px;
     margin-right: 25px;
-    margin-bottom: 25px;
-    background: url("../img/Layer 78.png") no-repeat;
-    background-size: cover;
+    margin-bottom: 10px;
     float: left;
 }
 
@@ -112,7 +110,7 @@ h3 {
 .line {
     width: 900px;
     height: 1px;
-    background-color: #263555;
+    background-color:  #dedbdb;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -184,7 +182,7 @@ p {
     text-align: center;
 }
 
-.testimonial-quote {
+blockquote {
     width: 210px;
     height: 190px;
     border: 1px solid #dfdcdc;
@@ -193,17 +191,18 @@ p {
     padding: 23px;
     box-sizing: border-box;
     margin-bottom: 30px;
-}
-
-.testimonial-quote p {
     text-align: left;
 }
 
-.testimonial-quote p::before {
+blockquote p {
+    text-align: left;
+}
+
+blockquote p::before {
     content: "\201C";
 }
 
-.testimonial-quote p::after {
+blockquote p::after {
     content: "\201D";
 }
 
