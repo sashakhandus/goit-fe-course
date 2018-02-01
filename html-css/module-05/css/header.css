@@ -1,0 +1,86 @@
+header {
+    width: 1024px;
+    margin: auto;
+    margin-bottom: 45px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Pathway Gothic One';
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+.menu {
+    display: inline-block;
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    bottom: -95px;
+    left: 45px;
+    font-size: 0;
+    
+}
+
+.submenu li {
+    list-style-type: none;
+}
+
+.submenu a {
+    margin-left: 0;
+    color: #b0b5c0;
+    font-size: 20px;
+}
+
+.list-submenu {
+    background: #fff;
+    width: 68px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+}
+
+.submenu:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 3px 6px 3px;
+    border-color: transparent transparent #fff transparent;
+}
+
+.menu:hover>.submenu {
+    display: inline-block;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+    color: #263555;
+}
+
+.logo {
+    display: inline-block;
+    font-family: Dorsa;
+    font-size: 36px;
+    color: #263555;
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    border-radius: 100px;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+
+.logo h1 {
+    padding-top: 40px;
+}

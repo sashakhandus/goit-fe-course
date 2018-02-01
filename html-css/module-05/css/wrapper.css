@@ -1,0 +1,129 @@
+.wrapper {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 1024px;
+    background-color: white;
+    font-family: 'Pathway Gothic One';
+    padding: 60px 60px 140px 60px;
+}
+
+.slider {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.first {
+    width: 240px;
+    font-size: 18px;
+    color: #43506c;
+    background: #fff;
+    box-sizing: border-box;
+    font-family: 'Pathway Gothic One';
+    text-transform: uppercase;
+    border: 1px solid #ececeb;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 15px;
+    font-stretch: ultra-condensed;
+    position: absolute;
+    top: 220px;
+}
+
+.second {
+    width: 280px;
+    font-size: 26px;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: 'Pathway Gothic One';
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-top: 16px;
+    padding-left: 15px;
+    position: absolute;
+    top: 275px;
+}
+
+.controls {
+    width: 90px;
+    height: 90px;
+    background: #38afe5;
+    color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 450px;
+    left: 37px;
+    display: inline-block;
+    text-align: center;
+}
+
+.controls p {
+    padding-top: 37px;
+}
+
+
+/***********TOP-DESTINATIONS*******/
+
+.top-destinations h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #263555;
+    margin-bottom: 50px;
+}
+
+.top-destinations li {
+    display: inline-block;
+    margin-right: 17px;
+}
+
+.top-destinations li:nth-child(3n) {
+    margin-right: 0;
+} 
+
+.list-item {
+    position: relative;
+}
+
+.image-hover {
+    width: 147px;
+    height: 270px;
+    background: #193149;
+    padding: 20px 9px;
+    position: absolute;
+    top: 0;
+    left:0;
+    display: none;
+}
+
+.image-hover h3 {
+    color: #e0e4e7;
+    font-family: 'Pathway Gothic One';
+    font-size: 30px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.image-hover p {
+    color: #cbc6c6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    line-height: 15px;
+    margin-bottom: 25px;
+}
+
+.image-hover a {
+    padding: 7px 14px;
+    background: #fbf6f9;
+    color: #000;
+    font-size: 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    position: absolute;
+    right: 12px;
+}
+
+.list-item:hover>.image-hover {
+    display: block;
+}
+
+
