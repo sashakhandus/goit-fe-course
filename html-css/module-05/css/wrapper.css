@@ -29,6 +29,10 @@
     top: 220px;
 }
 
+.first h3 {
+    font-weight: 400;
+}
+
 .second {
     width: 280px;
     font-size: 26px;
@@ -43,23 +47,40 @@
     top: 275px;
 }
 
+.second h3 {
+    font-weight: 400;
+}
+
 .controls {
-    width: 90px;
-    height: 90px;
-    background: #38afe5;
-    color: #fff;
-    border-radius: 50px;
     position: absolute;
     top: 450px;
     left: 37px;
     display: inline-block;
+    font-size: 0;
     text-align: center;
 }
 
-.controls p {
-    padding-top: 37px;
+.btn-left {
+    width: 45px;
+    height: 90px;
+    background: #38afe5;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
+.btn-right {
+    width: 45px;
+    height: 90px;
+    background: #38afe5;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
 
 /***********TOP-DESTINATIONS*******/
 
