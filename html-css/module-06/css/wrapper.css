@@ -1,0 +1,28 @@
+.wrapper {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 64rem;
+    background-color: var(--main-white-color);
+    font-family: 'Pathway Gothic One';
+    padding: 6rem 3.75rem 6.25rem 3.75rem;
+}
+
+.title-gallery {
+    text-transform: uppercase;
+    color: var(--main-gray-color);
+    font-family: 'Pathway Gothic One';
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2.875rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery li {
+    list-style-type: none;
+    margin-bottom: 2.5rem;
+}
