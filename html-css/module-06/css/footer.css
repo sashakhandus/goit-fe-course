@@ -4,14 +4,16 @@
     width: 64rem;
     background-color: var(--bg-footer-menu);
     font-family: 'Pathway Gothic One';
-    padding: 2.8125rem 3.75rem 3rem 3.75rem;
+    padding: 2.8125rem 11.875rem 3rem 8.75rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer-menu ul {
     display: flex;
     justify-content: space-between;
-    width: 43.75rem;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 28.75rem;
 }
 
 .footer-menu li {
@@ -24,7 +26,12 @@
     color: var(--color-footer-menu);
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 400;
+    font-size: 1rem;
     text-transform: uppercase;
+}
+
+.footer-menu a:hover {
+    color: var(--light-gray-color);
 }
 
 .footer-menu h3 {
@@ -47,6 +54,10 @@
     text-transform: uppercase;
 }
 
+address {
+    width: 8rem;
+}
+
 
 
 /*************FOOTER_LINKS***********/
@@ -62,11 +73,12 @@
    padding-top: 1.5rem;
    padding-bottom: 1.5rem;
 }
-
+  
 .twitter-link, .facebook-link, .google-link, .in-link {
     display: inline-block;
     font-family: 'Open Sans Condensed', sans-serif;
 }
+
 .twitter-link {
     background:url('../img/social-links/css-sprite-combined.png.png') -120px -0px;
     width:40px;height:40px;
@@ -90,12 +102,21 @@
     width:40px;height:40px;
 }
 
-.footer-links .links {
+.twitter-link:hover, .facebook-link:hover, .google-link:hover,  .in-link:hover {
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 40px;
+}
+
+
+/***************SECOND_LINKS**************/
+
+.second-links {
     text-align: center;
     padding-bottom: 1.5rem;
 }
 
-.footer-links .links li {
+.second-links li {
     list-style-type: none;
     color: var(--main-white-color);
     font-family:  Arial, Helvetica, sans-serif;
@@ -106,7 +127,19 @@
     padding-right: 0.3rem;
 }
 
-.footer-links .links li:last-child {
+.second-links li a {
+    color: var(--main-white-color);
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.second-links li a:hover {
+    color: var(--light-gray-color);
+}
+
+.second-links li:last-child {
     border-right: none;
     padding-right: 0;
 }

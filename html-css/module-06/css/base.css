@@ -5,7 +5,6 @@
 }
 
 .background {
-    width: 120rem;
     background: url("../img/page-bg.png") no-repeat;
     background-size: cover;
     padding-top: 2.8rem;
