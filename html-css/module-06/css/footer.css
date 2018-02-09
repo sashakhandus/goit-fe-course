@@ -81,25 +81,21 @@ address {
 }
 
 .twitter-link {
-    background:url('../img/social-links/css-sprite-combined.png.png') -120px -0px;
     width:40px;height:40px;
     margin-right: 0.5rem;
 }
 
 .facebook-link {
-    background:url('../img/social-links/css-sprite-combined.png.png') 0px -0px;
     width:40px;height:40px;
     margin-right: 0.5rem;
 }
 
 .google-link {
-    background:url('../img/social-links/css-sprite-combined.png.png') -40px -0px;
     width:40px;height:40px;
     margin-right: 0.5rem;
 }
 
 .in-link {
-    background:url('../img/social-links/css-sprite-combined.png.png') -80px -0px;
     width:40px;height:40px;
 }
 
