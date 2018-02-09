@@ -13,11 +13,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 28.75rem;
+    width: 29rem;
 }
 
 .footer-menu li {
     list-style-type: none;
+    flex-basis: 33%;
 }
 
 .footer-menu a {
@@ -34,7 +35,7 @@
     color: var(--light-gray-color);
 }
 
-.footer-menu h3 {
+.footer-menu span {
     color: var(--color-footer-menu);
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1.125rem;
@@ -42,7 +43,7 @@
     text-transform: uppercase;
 }
 
-.footer-menu h4, .footer-menu p {
+.footer-menu address a {
     color: var(--color-footer-menu);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.75rem;
@@ -50,8 +51,8 @@
     line-height: 1.125rem;
 }
 
-.footer-menu h4 {
-    text-transform: uppercase;
+.footer-menu .mail {
+    text-transform: none;
 }
 
 address {
@@ -76,7 +77,7 @@ address {
   
 .twitter-link, .facebook-link, .google-link, .in-link {
     display: inline-block;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 0;
 }
 
 .twitter-link {
