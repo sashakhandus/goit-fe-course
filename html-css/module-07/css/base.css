@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';       
+    src: url('../fonts/Montserrat-Regular.ttf'); 
+    font-weight: 400;              
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Montserrat';      
+    src: url('../fonts/Montserrat-Bold.ttf');
+    font-weight: 700;             
+    font-style: normal;
+  }
+
+.container {
+    width: 56.25rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.italic {
+    font-style: italic;
+}

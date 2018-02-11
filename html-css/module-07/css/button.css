@@ -1,0 +1,15 @@
+.btn {
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.125rem;
+    background-color: var(--yellow-color);
+    padding: 1.5rem 3.125rem;
+    border: 1px solid var(--yellow-color);
+    border-radius: 3px;
+}
+
+.btn:hover {
+    border: 1px solid var(--white-color);
+    color: var(--gray-color);
+}

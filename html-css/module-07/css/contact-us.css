@@ -1,0 +1,71 @@
+.contact-us {
+    background: url("../img/bg-02.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 2.75rem;
+    padding-bottom: 5.625rem;
+}
+
+.contact-us h3 {
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+    color: var(--white-color);
+}
+
+.contact-us h5 {
+    font-family: 'Crimson Text';
+    font-size: 1rem;
+    color: var(--gray-color);
+    margin-bottom: 5rem;
+}
+.contact-us .form-areas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.875rem;
+}
+
+.contact-us .form-areas .inputs {
+    display: inline-block;
+    text-align: left;
+    flex-basis: 50%;
+}
+
+.contact-us .form-areas textarea {
+    display: inline-block;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: var(--gray-color);
+    padding: 1.25rem;
+    width: 27.5rem;
+    resize: none;
+}
+
+
+.contact-us .form-areas textarea::placeholder {
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--gray-color);
+}
+
+.contact-us .form-areas .inputs input {
+    width: 27.5rem;
+    height: 2.75rem;
+    border-radius: 3px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-bottom: 1.175rem;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.contact-us .form-areas .inputs input:last-child {
+    margin-bottom: 0;
+}
