@@ -1,10 +1,11 @@
 .contact-us {
-    background: url("../img/bg-02.png");
-    background-repeat: no-repeat;
+    background: url("../img/bg-03.png") no-repeat;
     background-size: cover;
     padding-top: 2.75rem;
     padding-bottom: 5.625rem;
 }
+
+
 
 .contact-us h3 {
     font-family: Montserrat;
