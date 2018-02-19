@@ -67,7 +67,7 @@ header {
 
 @media (min-width: 1100px) {
     .container {
-        max-width: 58.75rem;
+        max-width: 58.875rem;
     }
 }
 
@@ -163,20 +163,6 @@ main {
     }
 }
 
-
-.container {
-    max-width: 20rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-@media (min-width: 760px) {
-    .container {
-        max-width: 32rem;
-    }
-}
-
-
 main .btn {
     color: #ff4e50;
 }
@@ -218,6 +204,7 @@ main h2 {
     font-family: Roboto;
     font-weight: light;
     font-size: 0.875rem;
+    color: #666666;
     margin-bottom: 1.75rem;
 }
 
@@ -238,27 +225,12 @@ main h2 {
         font-size: 0.875rem;
         margin-bottom: 2rem;
     }
-
 }
 
 @media (min-width: 1100px) {
-    .list-partners {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-bottom: 2.5rem;
-    }
-
     .list-partners li {
         flex-basis: 24%;
     }
-    
-    .list-partners p {
-        font-size: 0.875rem;
-        margin-bottom: 2rem;
-    }
-
 }
 
 .photo {
@@ -296,13 +268,13 @@ main h2 {
 
 @media (min-width: 760px) {
     .img-icon {
-        right: 70px;
+        right: 125px;
     }
 }
 
 @media (min-width: 1100px) {
     .img-icon {
-        right: 0px;
+        right: 50px;
     }
 }
 
