@@ -237,6 +237,8 @@ main h2 {
 
 .photo {
     position: relative;
+    width: 130px;
+    margin: 0 auto;
 }
 
 .img-icon {
@@ -246,8 +248,8 @@ main h2 {
     border-radius: 40px;
     box-sizing: border-box;
     position: absolute;
-    bottom: 0px;
-    right: 190px;
+    bottom: 0;
+    right: 0;
 }
 
 .icon1 {
@@ -265,25 +267,3 @@ main h2 {
 .icon4 {
     background: #4e73db;
 }
-
-
-@media (min-width: 760px) {
-    .img-icon {
-        right: 100px;
-    }
-}
-
-@media (min-width: 990px) {
-    .img-icon {
-        right: 160px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .img-icon {
-        right: 60px;
-    }
-}
-
-
-
