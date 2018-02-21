@@ -63,7 +63,7 @@ main .partners a {
     text-decoration: none;
 }
 
-nav {
+.head-page {
     margin-bottom: 2.5rem;
     font-family: Montserrat;
     font-weight: bold;
@@ -71,7 +71,7 @@ nav {
     margin: 0 auto;
 }
 
-nav .nav-links {
+.head-page .nav-links {
     text-align: center;
 }
 
@@ -82,7 +82,7 @@ nav .nav-links {
 }
 
 @media (min-width: 760px) {
-    nav {
+    .head-page {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -91,23 +91,23 @@ nav .nav-links {
     }
 }
 
-nav .logo {
+.head-page .logo {
     font-size: 1.25rem;
     text-transform: uppercase;
     text-align: center;
 }
 
-nav .logo a:hover {
+.head-page .logo a:hover {
     color: #fff;
 }
 
-nav .btn {
+.head-page .btn {
     border: 3px solid transparent;
     width: 6rem;
     font-size: 0.875rem;
 }
 
-nav .btn:hover {
+.head-page .btn:hover {
     border: 3px solid #fff;
     background-color: transparent;
     color: #fff;

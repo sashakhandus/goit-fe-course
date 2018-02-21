@@ -73,7 +73,7 @@ header {
     }
 }
 
-nav {
+.head-page {
     margin-bottom: 2.5rem;
     font-family: Montserrat;
     font-weight: bold;
@@ -88,7 +88,7 @@ nav {
 }
 
 @media (min-width: 760px) {
-    nav {
+    .head-page {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -96,18 +96,18 @@ nav {
     }
 }
 
-nav .logo {
+.head-page .logo {
     font-size: 1.25rem;
     text-transform: uppercase;
 }
 
-nav .btn {
+.head-page .btn {
     border: 3px solid transparent;
     width: 6rem;
     font-size: 0.875rem;
 }
 
-nav .btn:hover {
+.head-page .btn:hover {
     border: 3px solid #fff;
     background-color: transparent;
 }
@@ -141,7 +141,7 @@ nav .btn:hover {
 
 .wrapper h3 {
     font-family: Roboto;
-    font-weight: light;
+    font-weight: 300;
     font-size: 1.25rem;
     margin-bottom: 1.25rem;
 }
@@ -226,7 +226,7 @@ main h2 {
 
 .list-partners p {
     font-family: Roboto;
-    font-weight: light;
+    font-weight: 300;
     font-size: 0.875rem;
     color: #666666;
     margin-bottom: 1.75rem;
