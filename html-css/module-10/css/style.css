@@ -1,0 +1,318 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style-type: none;
+}
+
+/***********HEADER**********/
+
+.head-page {
+    padding-top: 1.75rem;
+    margin-bottom: 8.75rem;
+    color: #95e1d3;
+    margin: 0 auto;
+}
+
+@media (min-width: 760px) {
+    .head-page {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        margin-bottom: 10rem;
+    }
+}
+
+.logo .logo__name {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.875rem;
+    text-align: center;
+}
+
+.nav__item {
+    display: block;
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 0.875rem;
+    color: #95e1d3;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 3px solid transparent;
+
+}
+
+@media (min-width: 760px) {
+    .nav__item {
+        text-align: center;
+        display: inline-block;
+        margin-right: 3.75rem;
+        margin-bottom: 0;
+    }
+}
+
+.nav__item--last-child {
+    margin-right: 0;
+}
+
+.nav__item--hover:hover {
+    text-decoration: none;
+    color: #f38181;
+    border-bottom: 3px solid #f38181;
+}
+
+/**********HEAD_SECTION************/
+
+.head-section {
+    text-align: center;
+    margin-bottom: 3.875rem;
+}
+
+.head-section__discr {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.head-section__title {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.head-section__line {
+    display: inline-block;
+    width: 3.75rem;
+    border-bottom: 3px solid #f38181;
+}
+
+/***************AMAZING-SERVICES*********/
+
+.services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 2.5rem;
+}
+
+.service__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 6.25rem;
+}
+
+.service__icon {
+    margin-top: 0.25rem;
+}
+
+.service__article {
+    display: inline-block;
+    -ms-flex-preferred-size: 85%;
+        flex-basis: 85%;
+}
+
+.service__title {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.service__discr {
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 0.9375rem;
+    color: #a6a6a6;
+}
+
+.team {
+    text-align: center;
+}
+
+.team__discr {
+    display: inline-block;
+    width: 23rem;
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 0.9375rem;
+    color: #a6a6a6;
+    margin-bottom: 5.625rem;
+}
+
+@media (min-width: 720px) {
+    .team__discr {   
+        width: 35rem;
+    }
+}
+
+@media (min-width: 960px) {
+    .team__discr {   
+        width: 50rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .team__discr {   
+        width: 60rem;
+    }
+}
+
+.team__galery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    /*flex-basis: 30%;*/
+}
+
+.card__background {
+    background-color: #95e1d3;
+    position: relative;
+    margin-bottom: 1.875rem;
+}
+
+.card__img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.card__name {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.card__prof {
+    font-family: Roboto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 0.9375rem;
+    color: #a6a6a6;
+    margin-bottom: 5.625rem;
+}
+
+.card__img {
+    position: relative;
+}
+
+.card__img:hover {
+    position: relative;
+    -webkit-transform: translate(-10px, -10px);
+        -ms-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px);
+}
+
+.card__img:hover .card__social-list {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient( linear, left top, left bottom, from(rgba(243, 129, 129, 0.9)), to(rgba(252, 227, 138, 0.9)));
+    background: -webkit-linear-gradient( rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
+    background: -o-linear-gradient( rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
+    background: linear-gradient( rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
+}
+
+.card__social-list {
+    display: none;
+}
+
+.card__social-icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.icons-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); 
+}
+
+.icon {
+    display: inline-block;
+    width: 1.625rem;
+    height: 1.625rem;
+    fill: #f38181;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.icons-container {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.75rem;
+    background: #fce38a;
+    border-right: 1px solid #f38181;
+    position: relative;
+    cursor: pointer;
+}
+
+.icons-container:last-child {
+    border-right: none;
+}
+
+.icons-container:hover {
+    background: #f38181;
+}
+
+.icons-container:hover .icon {
+    fill: #fff;
+}
