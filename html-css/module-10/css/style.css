@@ -270,7 +270,7 @@ li {
 }
 
 
-.icons-links {
+.icons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -282,7 +282,7 @@ li {
             transform: translate(-50%, -50%); 
 }
 
-.icon {
+.icons__link {
     display: inline-block;
     width: 1.625rem;
     height: 1.625rem;
@@ -295,7 +295,7 @@ li {
             transform: translate(-50%, -50%);
 }
 
-.icons-container {
+.icons__container {
     display: inline-block;
     width: 3.5rem;
     height: 3.75rem;
@@ -305,14 +305,14 @@ li {
     cursor: pointer;
 }
 
-.icons-container:last-child {
+.icons__container:last-child {
     border-right: none;
 }
 
-.icons-container:hover {
+.icons__container:hover {
     background: #f38181;
 }
 
-.icons-container:hover .icon {
+.icons__container:hover .icons__link {
     fill: #fff;
 }
