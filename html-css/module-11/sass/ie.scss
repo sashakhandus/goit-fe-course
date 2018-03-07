@@ -1,0 +1,481 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+
+ @import 'variables';
+ @import 'placeholder';
+ @import 'mixin';
+
+/***********BASE************/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $white-color;
+}
+
+li {
+    list-style-type: none;
+}
+
+.btn {
+    @extend %Montserat-bold;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    height: 2.5rem;
+    padding: 0.625rem 2rem;  
+}
+
+/***********BACKGROUND**********/
+
+.background {
+    background: url(../img/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: $white-color;
+}
+
+.gradient {
+    @include gradient($gradient-pink-color, $gradient-yellow-color);
+    height: 100vh;
+}
+
+.wrapper {
+    width: 25rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.welcome__discr {
+    @extend %KaushanScript-cursive-normal;
+    font-size: 2.5rem;
+}
+
+.welcome__title {
+    @extend %Montserat-bold;
+    font-size: 4rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 7.875rem;
+}
+
+.btn__welcome {
+    border: 2px solid $white-color;
+}
+
+.btn__welcome--hover:hover {
+    border: 2px solid $yellow-color;
+    color: $yellow-color;
+    text-decoration: none;
+}
+
+
+@media (min-width: 720px) {
+    .wrapper {   
+        width: 35rem;
+    }
+    .welcome__discr {
+        font-size: 3.5rem;
+    }
+    .welcome__title {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+}
+
+@media (min-width: 960px) {
+    .wrapper {   
+        width: 45rem;
+    }
+    .welcome__discr {
+        font-size: 4rem;
+    }
+    .welcome__title {
+        font-size: 7rem;
+        line-height: 7rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {   
+        width: 51.25rem;
+    }
+    .welcome__discr {
+        font-size: 4.5rem;
+    }
+    .welcome__title {
+        font-size: 9.375rem;
+        line-height: 9.5rem;
+    }
+}
+
+/***********HEADER**********/
+
+.head-page {
+    padding-top: 1.75rem;
+    margin-bottom: 8.75rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 760px) {
+    .head-page {
+        @include flex-between;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        margin-bottom: 10rem;
+    }
+}
+
+.logo__name {
+    @extend %Montserat-bold;
+    font-size: 1.875rem;
+    text-align: center;
+}
+
+.nav__item {
+    @extend %Montserat-normal;
+    display: block;
+    font-size: 0.875rem;
+    color: $white-color;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 3px solid transparent;
+
+}
+
+@media (min-width: 720px) {
+    .nav__item {
+        text-align: center;
+        display: inline-block;
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 960px) {
+    .nav__item {
+        margin-right: 3.75rem;
+    }
+}
+
+.nav__item--last-child {
+    margin-right: 0;
+}
+
+.nav__item--hover:hover {
+    text-decoration: none;
+    color: $yellow-color;
+    border-bottom: 3px solid $yellow-color;
+}
+
+.nav__icons {
+    display: inline-block;
+    width: 1.125rem;
+    height: 1.125rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: $white-color;
+}
+
+.nav__item--hover:hover .nav__icons {
+    fill: $yellow-color;
+}
+
+/**********HEAD_SECTION************/
+
+.head-section {
+    text-align: center;
+    margin-top: 1.25rem;
+    margin-bottom: 3.875rem;
+}
+
+.head-section__discr {
+    @extend %KaushanScript-cursive-normal;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.head-section__title {
+    @extend %Montserat-bold;
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.head-section__line {
+    display: inline-block;
+    width: 3.75rem;
+    border-bottom: 3px solid $icon-red-color;
+}
+
+/***************AMAZING-SERVICES*********/
+
+.services {
+    @include flex-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.service__item {
+    @include flex-between;
+    margin-bottom: 6.25rem;
+}
+
+.service__icon {
+    margin-top: 0.25rem;
+}
+
+.service__article {
+    display: inline-block;
+    -ms-flex-preferred-size: 85%;
+        flex-basis: 85%;
+}
+
+.service__title {
+    @extend %Montserat-normal;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: $gray-color;
+}
+
+.service__discr {
+    @extend %Roboto-normal;
+    font-size: 0.9375rem;
+    color: $light-gray-color;
+}
+
+.team {
+    text-align: center;
+}
+
+.team__discr {
+    @extend %Roboto-normal;
+    display: inline-block;
+    width: 23rem; 
+    font-size: 0.9375rem;
+    color: $light-gray-color;
+    margin-bottom: 5.625rem;
+}
+
+@media (min-width: 720px) {
+    .team__discr {   
+        width: 35rem;
+    }
+}
+
+@media (min-width: 960px) {
+    .team__discr {   
+        width: 50rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .team__discr {   
+        width: 60rem;
+    }
+}
+
+.team__galery {
+    @include flex-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.card__background {
+    background-color: $green-color;
+    position: relative;
+    margin-bottom: 1.875rem;
+}
+
+.card__img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.card__name {
+    @extend %Montserat-normal;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: $gray-color;
+}
+
+.card__prof {
+    @extend %Roboto-italic-300;
+    font-style: italic;
+    font-size: 0.9375rem;
+    color: $light-gray-color;
+    margin-bottom: 5.625rem;
+}
+
+.card__img {
+    position: relative;
+
+    &:hover {
+        position: relative;
+        -webkit-transform: translate(-10px, -10px);
+            -ms-transform: translate(-10px, -10px);
+                transform: translate(-10px, -10px);
+    }
+
+    &:hover .card__social-list {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include gradient($gradient-pink-color, $gradient-yellow-color);
+    }
+
+}
+
+.card__social-list {
+    display: none;
+}
+
+.card__social-icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); 
+}
+
+.icons__link {
+    display: inline-block;
+    width: 1.625rem;
+    height: 1.625rem;
+    fill: $light-pink-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.icons__container {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.75rem;
+    background: $yellow-color;
+    border-right: 1px solid $icon-red-color;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        background: $icon-red-color;
+    }
+
+    &:hover .icons__link {
+        fill: $white-color;
+    }
+}
+
+.icons__container:last-child {
+    border-right: none;
+}
+
+/************FOOTER**********/
+
+.footer__line {
+    border-bottom: 1px solid $footer-graay-color;
+    margin-bottom: 0.625rem;
+}
+
+.footer__content {
+    margin-bottom: 4rem;
+}
+
+.footer__discr {
+    @extend %Montserat-normal;
+    font-size: 0.875rem;
+    color: $dark-gray-color;
+}
+
+.footer__discr--red {
+    color: $light-pink-color;
+
+    &:hover {
+        color: $light-pink-color;
+        text-decoration: none;
+    }
+}
+
+.form {
+    display: inline-block;
+}
+
+.form__text {
+    @extend %Roboto-italic-300;
+    margin: 0;
+    width: 14.375rem;
+    height: 2.5rem;
+    border: 1px solid $footer-graay-color;
+    color: $footer-graay-color;
+    padding-left: 0.875rem;
+    outline: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.form__text::-webkit-input-placeholder {
+    color: $footer-graay-color;
+   } 
+
+.form__text::-moz-placeholder {
+    color: $footer-graay-color;
+}
+
+.form__submit {
+    @extend %Montserat-bold;
+    margin: 0;
+    margin-left: -4px;
+    width: 9.5rem;
+    height: 2.5rem;
+    border: 1px solid $green-color;
+    background: $green-color;
+    color: $white-color;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 720px) {
+    .footer__content {
+        @include flex-between;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
+    }    
+}
+
