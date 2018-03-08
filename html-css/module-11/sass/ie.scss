@@ -36,37 +36,36 @@ li {
 
 /***********BACKGROUND**********/
 
-.background {
-    background: url(../img/background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    color: $white-color;
-}
-
 .gradient {
-    @include gradient($gradient-pink-color, $gradient-yellow-color);
-    height: 100vh;
+    background:  -webkit-gradient( linear, left top, left bottom, from($gradient-pink-color), to($gradient-yellow-color)), url(../img/background.png) center no-repeat;
+    background:  -webkit-linear-gradient( $gradient-pink-color, $gradient-yellow-color), url(../img/background.png) center no-repeat;
+    background:  -o-linear-gradient( $gradient-pink-color, $gradient-yellow-color), url(../img/background.png) center no-repeat;
+    background:  linear-gradient( $gradient-pink-color, $gradient-yellow-color), url(../img/background.png) center no-repeat;
+    min-height: 62.5rem;
+    color: $white-color;
+    background-size: cover;
 }
 
-.wrapper {
+.welcome .wrapper {
     width: 25rem;
     text-align: center;
     margin: 0 auto;
+    color: $white-color;
 }
 
-.welcome__discr {
+.welcome .welcome__discr {
     @extend %KaushanScript-cursive-normal;
     font-size: 2.5rem;
+    color: $white-color;
 }
 
-.welcome__title {
+.welcome .welcome__title {
     @extend %Montserat-bold;
     font-size: 4rem;
     line-height: 4rem;
     text-transform: uppercase;
     margin-bottom: 7.875rem;
+    color: $white-color;
 }
 
 .btn__welcome {
@@ -131,6 +130,7 @@ li {
     .head-page {
         @include flex-between;
         -webkit-box-align: baseline;
+
             -ms-flex-align: baseline;
                 align-items: baseline;
         -ms-flex-line-pack: center;
@@ -145,6 +145,16 @@ li {
     text-align: center;
 }
 
+.head-page .logo a.logo__name:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.head-page .logo a.logo__name:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
 .nav__item {
     @extend %Montserat-normal;
     display: block;
@@ -154,10 +164,12 @@ li {
     margin-bottom: 1rem;
     padding-bottom: 0.625rem;
     border-bottom: 3px solid transparent;
-
 }
 
 @media (min-width: 720px) {
+    .nav {
+        @include flex-between;
+    }
     .nav__item {
         text-align: center;
         display: inline-block;
@@ -176,9 +188,17 @@ li {
     margin-right: 0;
 }
 
-.nav__item--hover:hover {
+.nav__item--hover:hover a.nav__link{
     text-decoration: none;
     color: $yellow-color;
+}
+
+a.nav__link:hover  a.nav__link{
+    text-decoration: none;
+    color: $yellow-color;
+}
+
+.nav__item--hover:hover  {
     border-bottom: 3px solid $yellow-color;
 }
 
@@ -200,26 +220,30 @@ li {
 .head-section {
     text-align: center;
     margin-top: 1.25rem;
-    margin-bottom: 3.875rem;
+    margin-bottom: 6.5rem;
 }
 
 .head-section__discr {
     @extend %KaushanScript-cursive-normal;
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 3.75rem;
+        border-bottom: 3px solid $icon-red-color;
+        top: 8rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .head-section__title {
     @extend %Montserat-bold;
     font-size: 1.875rem;
     text-transform: uppercase;
-    margin-bottom: 2rem;
-}
-
-.head-section__line {
-    display: inline-block;
-    width: 3.75rem;
-    border-bottom: 3px solid $icon-red-color;
 }
 
 /***************AMAZING-SERVICES*********/
@@ -301,6 +325,23 @@ li {
     background-color: $green-color;
     position: relative;
     margin-bottom: 1.875rem;
+
+    &:hover .card__img { 
+            position: relative;
+            -webkit-transform: translate(-10px, -10px);
+                -ms-transform: translate(-10px, -10px);
+                    transform: translate(-10px, -10px);
+    }
+
+    &:hover .card__social-list {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include gradient($gradient-pink-color, $gradient-yellow-color);
+    }
 }
 
 .card__img img{
@@ -408,13 +449,18 @@ li {
 
 /************FOOTER**********/
 
-.footer__line {
-    border-bottom: 1px solid $footer-graay-color;
-    margin-bottom: 0.625rem;
-}
-
 .footer__content {
     margin-bottom: 4rem;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $footer-graay-color;
+        top: -0.625rem;
+        left: 0;
+    }
 }
 
 .footer__discr {
@@ -478,4 +524,3 @@ li {
                 align-items: baseline;
     }    
 }
-
