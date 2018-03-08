@@ -41,7 +41,7 @@ li {
     background:  -webkit-linear-gradient( $gradient-pink-color, $gradient-yellow-color), url(../img/background.png) center no-repeat;
     background:  -o-linear-gradient( $gradient-pink-color, $gradient-yellow-color), url(../img/background.png) center no-repeat;
     background:  linear-gradient( $gradient-pink-color, $gradient-yellow-color), url(../img/background.png) center no-repeat;
-    min-height: 62.5rem;
+    min-height: 100vh;
     color: $white-color;
     background-size: cover;
 }
@@ -244,6 +244,7 @@ a.nav__link:hover  a.nav__link{
     @extend %Montserat-bold;
     font-size: 1.875rem;
     text-transform: uppercase;
+    display: block;
 }
 
 /***************AMAZING-SERVICES*********/
