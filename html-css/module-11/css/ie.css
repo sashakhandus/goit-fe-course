@@ -4,7 +4,7 @@
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
 /* line 2, ../sass/_placeholder.scss */
-.btn, .welcome .welcome__title, .logo__name, .head-section__title, .form__submit {
+.btn, .welcome .welcome__title, .logo__name, span.head-section__title, .form__submit {
   font-family: Montserrat;
   font-weight: bold;
 }
@@ -69,7 +69,7 @@ li {
   background: -webkit-linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url(../img/background.png) center no-repeat;
   background: -o-linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url(../img/background.png) center no-repeat;
   background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9)), url(../img/background.png) center no-repeat;
-  min-height: 62.5rem;
+  min-height: 100vh;
   color: #fff;
   background-size: cover;
 }
@@ -289,8 +289,9 @@ a.nav__link:hover a.nav__link {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
   position: relative;
+  display: block;
 }
-/* line 231, ../sass/ie.scss */
+/* line 232, ../sass/ie.scss */
 .head-section__discr::after {
   content: "";
   position: absolute;
@@ -302,14 +303,15 @@ a.nav__link:hover a.nav__link {
   transform: translate(-50%, -50%);
 }
 
-/* line 243, ../sass/ie.scss */
-.head-section__title {
+/* line 244, ../sass/ie.scss */
+span.head-section__title {
   font-size: 1.875rem;
   text-transform: uppercase;
+  display: block;
 }
 
 /***************AMAZING-SERVICES*********/
-/* line 251, ../sass/ie.scss */
+/* line 253, ../sass/ie.scss */
 .services {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,7 +323,7 @@ a.nav__link:hover a.nav__link {
   margin-bottom: 2.5rem;
 }
 
-/* line 258, ../sass/ie.scss */
+/* line 260, ../sass/ie.scss */
 .service__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -332,37 +334,37 @@ a.nav__link:hover a.nav__link {
   margin-bottom: 6.25rem;
 }
 
-/* line 263, ../sass/ie.scss */
+/* line 265, ../sass/ie.scss */
 .service__icon {
   margin-top: 0.25rem;
 }
 
-/* line 267, ../sass/ie.scss */
+/* line 269, ../sass/ie.scss */
 .service__article {
   display: inline-block;
   -ms-flex-preferred-size: 85%;
   flex-basis: 85%;
 }
 
-/* line 273, ../sass/ie.scss */
+/* line 275, ../sass/ie.scss */
 .service__title {
   font-size: 0.875rem;
   text-transform: uppercase;
   color: #666;
 }
 
-/* line 280, ../sass/ie.scss */
+/* line 282, ../sass/ie.scss */
 .service__discr {
   font-size: 0.9375rem;
   color: #a6a6a6;
 }
 
-/* line 286, ../sass/ie.scss */
+/* line 288, ../sass/ie.scss */
 .team {
   text-align: center;
 }
 
-/* line 290, ../sass/ie.scss */
+/* line 292, ../sass/ie.scss */
 .team__discr {
   display: inline-block;
   width: 23rem;
@@ -372,24 +374,24 @@ a.nav__link:hover a.nav__link {
 }
 
 @media (min-width: 720px) {
-  /* line 300, ../sass/ie.scss */
+  /* line 302, ../sass/ie.scss */
   .team__discr {
     width: 35rem;
   }
 }
 @media (min-width: 960px) {
-  /* line 306, ../sass/ie.scss */
+  /* line 308, ../sass/ie.scss */
   .team__discr {
     width: 50rem;
   }
 }
 @media (min-width: 1200px) {
-  /* line 312, ../sass/ie.scss */
+  /* line 314, ../sass/ie.scss */
   .team__discr {
     width: 60rem;
   }
 }
-/* line 317, ../sass/ie.scss */
+/* line 319, ../sass/ie.scss */
 .team__galery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -402,20 +404,20 @@ a.nav__link:hover a.nav__link {
   margin-bottom: 5rem;
 }
 
-/* line 324, ../sass/ie.scss */
+/* line 326, ../sass/ie.scss */
 .card__background {
   background-color: #95e1d3;
   position: relative;
   margin-bottom: 1.875rem;
 }
-/* line 329, ../sass/ie.scss */
+/* line 331, ../sass/ie.scss */
 .card__background:hover .card__img {
   position: relative;
   -webkit-transform: translate(-10px, -10px);
   -ms-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
 }
-/* line 336, ../sass/ie.scss */
+/* line 338, ../sass/ie.scss */
 .card__background:hover .card__social-list {
   display: block;
   position: absolute;
@@ -429,7 +431,7 @@ a.nav__link:hover a.nav__link {
   background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
 }
 
-/* line 347, ../sass/ie.scss */
+/* line 349, ../sass/ie.scss */
 .card__img img {
   display: block;
   width: 100%;
@@ -438,14 +440,14 @@ a.nav__link:hover a.nav__link {
   object-fit: cover;
 }
 
-/* line 355, ../sass/ie.scss */
+/* line 357, ../sass/ie.scss */
 .card__name {
   font-size: 1rem;
   text-transform: uppercase;
   color: #666;
 }
 
-/* line 362, ../sass/ie.scss */
+/* line 364, ../sass/ie.scss */
 .card__prof {
   font-style: italic;
   font-size: 0.9375rem;
@@ -453,18 +455,18 @@ a.nav__link:hover a.nav__link {
   margin-bottom: 5.625rem;
 }
 
-/* line 370, ../sass/ie.scss */
+/* line 372, ../sass/ie.scss */
 .card__img {
   position: relative;
 }
-/* line 373, ../sass/ie.scss */
+/* line 375, ../sass/ie.scss */
 .card__img:hover {
   position: relative;
   -webkit-transform: translate(-10px, -10px);
   -ms-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
 }
-/* line 380, ../sass/ie.scss */
+/* line 382, ../sass/ie.scss */
 .card__img:hover .card__social-list {
   display: block;
   position: absolute;
@@ -478,19 +480,19 @@ a.nav__link:hover a.nav__link {
   background: linear-gradient(rgba(243, 129, 129, 0.9), rgba(252, 227, 138, 0.9));
 }
 
-/* line 392, ../sass/ie.scss */
+/* line 394, ../sass/ie.scss */
 .card__social-list {
   display: none;
 }
 
-/* line 396, ../sass/ie.scss */
+/* line 398, ../sass/ie.scss */
 .card__social-icon {
   display: inline-block;
   width: 1rem;
   height: 1rem;
 }
 
-/* line 403, ../sass/ie.scss */
+/* line 405, ../sass/ie.scss */
 .icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -503,7 +505,7 @@ a.nav__link:hover a.nav__link {
   transform: translate(-50%, -50%);
 }
 
-/* line 415, ../sass/ie.scss */
+/* line 417, ../sass/ie.scss */
 .icons__link {
   display: inline-block;
   width: 1.625rem;
@@ -517,7 +519,7 @@ a.nav__link:hover a.nav__link {
   transform: translate(-50%, -50%);
 }
 
-/* line 428, ../sass/ie.scss */
+/* line 430, ../sass/ie.scss */
 .icons__container {
   display: inline-block;
   width: 3.5rem;
@@ -527,27 +529,27 @@ a.nav__link:hover a.nav__link {
   position: relative;
   cursor: pointer;
 }
-/* line 437, ../sass/ie.scss */
+/* line 439, ../sass/ie.scss */
 .icons__container:hover {
   background: #f38181;
 }
-/* line 441, ../sass/ie.scss */
+/* line 443, ../sass/ie.scss */
 .icons__container:hover .icons__link {
   fill: #fff;
 }
 
-/* line 446, ../sass/ie.scss */
+/* line 448, ../sass/ie.scss */
 .icons__container:last-child {
   border-right: none;
 }
 
 /************FOOTER**********/
-/* line 452, ../sass/ie.scss */
+/* line 454, ../sass/ie.scss */
 .footer__content {
   margin-bottom: 4rem;
   position: relative;
 }
-/* line 455, ../sass/ie.scss */
+/* line 457, ../sass/ie.scss */
 .footer__content::before {
   content: "";
   position: absolute;
@@ -558,28 +560,28 @@ a.nav__link:hover a.nav__link {
   left: 0;
 }
 
-/* line 466, ../sass/ie.scss */
+/* line 468, ../sass/ie.scss */
 .footer__discr {
   font-size: 0.875rem;
   color: #333;
 }
 
-/* line 472, ../sass/ie.scss */
+/* line 474, ../sass/ie.scss */
 .footer__discr--red {
   color: #f6a1a1;
 }
-/* line 475, ../sass/ie.scss */
+/* line 477, ../sass/ie.scss */
 .footer__discr--red:hover {
   color: #f6a1a1;
   text-decoration: none;
 }
 
-/* line 481, ../sass/ie.scss */
+/* line 483, ../sass/ie.scss */
 .form {
   display: inline-block;
 }
 
-/* line 485, ../sass/ie.scss */
+/* line 487, ../sass/ie.scss */
 .form__text {
   margin: 0;
   width: 14.375rem;
@@ -592,17 +594,17 @@ a.nav__link:hover a.nav__link {
   box-sizing: border-box;
 }
 
-/* line 498, ../sass/ie.scss */
+/* line 500, ../sass/ie.scss */
 .form__text::-webkit-input-placeholder {
   color: #e5e5e5;
 }
 
-/* line 502, ../sass/ie.scss */
+/* line 504, ../sass/ie.scss */
 .form__text::-moz-placeholder {
   color: #e5e5e5;
 }
 
-/* line 506, ../sass/ie.scss */
+/* line 508, ../sass/ie.scss */
 .form__submit {
   margin: 0;
   margin-left: -4px;
@@ -616,7 +618,7 @@ a.nav__link:hover a.nav__link {
 }
 
 @media (min-width: 720px) {
-  /* line 520, ../sass/ie.scss */
+  /* line 522, ../sass/ie.scss */
   .footer__content {
     display: -webkit-box;
     display: -ms-flexbox;

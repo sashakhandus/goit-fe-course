@@ -228,6 +228,7 @@ a.nav__link:hover  a.nav__link{
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
     position: relative;
+    display: block;
     &::after {
         content: "";
         position: absolute;
@@ -240,7 +241,7 @@ a.nav__link:hover  a.nav__link{
     }
 }
 
-.head-section__title {
+span.head-section__title {
     @extend %Montserat-bold;
     font-size: 1.875rem;
     text-transform: uppercase;
