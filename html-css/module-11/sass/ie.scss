@@ -46,6 +46,10 @@ li {
     background-size: cover;
 }
 
+.welcome {
+    margin-bottom: 14.375rem;
+}
+
 .welcome .wrapper {
     width: 25rem;
     text-align: center;
@@ -80,39 +84,39 @@ li {
 
 
 @media (min-width: 720px) {
-    .wrapper {   
+    .welcome .wrapper {   
         width: 35rem;
     }
-    .welcome__discr {
+    .welcome .welcome__discr {
         font-size: 3.5rem;
     }
-    .welcome__title {
+    .welcome .welcome__title {
         font-size: 5rem;
         line-height: 5rem;
     }
 }
 
 @media (min-width: 960px) {
-    .wrapper {   
+    .welcome .wrapper {   
         width: 45rem;
     }
-    .welcome__discr {
+    .welcome .welcome__discr {
         font-size: 4rem;
     }
-    .welcome__title {
+    .welcome .welcome__title {
         font-size: 7rem;
         line-height: 7rem;
     }
 }
 
 @media (min-width: 1200px) {
-    .wrapper {   
+    .welcome .wrapper {   
         width: 51.25rem;
     }
-    .welcome__discr {
+    .welcome .welcome__discr {
         font-size: 4.5rem;
     }
-    .welcome__title {
+    .welkome .welcome__title {
         font-size: 9.375rem;
         line-height: 9.5rem;
     }
@@ -237,7 +241,9 @@ a.nav__link:hover  a.nav__link{
         border-bottom: 3px solid $icon-red-color;
         top: 8rem;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
 }
 
@@ -481,7 +487,13 @@ span.head-section__title {
 }
 
 .form {
-    display: inline-block;
+    /*display: inline-block;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .form__text {
