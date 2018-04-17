@@ -8,7 +8,7 @@ console.log(numbersUser);
 console.log(typeof numbersUser);
 
 
-if (typeof Number.parseInt(numbersUser) === 'number' && !Number.isNaN(numbersUser) && (Number.parseInt(numbersUser) >= 0)) {
+if (typeof Number.parseInt(numbersUser) === 'number' && !Number.isNaN(numbersUser) && (Number.parseInt(numbersUser) > 0)) {
     if (numbersUser <= numbersTaba) {
        let answerUser = confirm ('Есть места в группе Taba. Вы согласны быть в этой группе?');
        if (answerUser) {
