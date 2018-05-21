@@ -34,31 +34,31 @@ function SocialBook (users = [], posts = {}) {
 
     this.getUserByLogin = (loginUser) => {
         return this.users.find(user => user.login === loginUser);
-    }
+    };
 
     this.getUserStatus = (userId) => {
         if (this.users.find(user => user.id === userId) != undefined)
             return this.users.find(user => user.id === userId).isActive ? 'active' : 'inactive'
         else
             return 'not found';
-    }
+    };
 
     this.addUser = (new_user) => {
         if (this.getUserByLogin(new_user.email) == undefined)
             this.users.push({ id: getId(), login: new_user.email, password: new_user.password, isActive: false });
-    }
+    };
 
     this.removeUserById = (userId) => {
         this.users.splice(this.users.indexOf(this.users.find(user => user.id === userId)), 1);
-    }
+    };
 
     this.getUserCount = () => {
         return this.users.length;
-    }
+    };
 
     this.getUserPosts = (userId) => {
         return this.posts[userId];
-    }
+    };
 
     this.addPost = (userId, post) => {
         this.posts[userId].push(post);
@@ -66,16 +66,15 @@ function SocialBook (users = [], posts = {}) {
 
     this.getAllLikes = (userId) => {
         return this.posts[userId].reduce((acc, post) => acc + post.likes, 0);
-    }
+    };
 
     this.addPostLike = (userId, postId) =>  {
         this.posts[userId].find(post => post.id === postId).likes += 1;
-    }
+    };
 
     this.getPostsCount = (userId) => {
         return this.posts[userId].length;
-    }
-       
+    };       
 
 };
 
@@ -121,6 +120,3 @@ function SocialBook (users = [], posts = {}) {
     console.log(socialBook.getUserPosts("-s19a6hqce"));
 
     console.log(socialBook.getPostsCount("-s19a6hqce"));
-
-    console.log(socialBook.removePost("-e51cpd4di", "-9y6nkmlj4"));
-
