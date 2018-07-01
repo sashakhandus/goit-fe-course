@@ -105,18 +105,17 @@ const addUser = () => {
 };
 
 const removeUser = () => {
-    const inputRemove = document.querySelector(".js-inputRemove");
-    fetch(`${apiUrl}_${inputRemove}`, {
+    const inputRemove = document.querySelector(".js-inputRemove").value;
+    fetch(`${apiUrl}${inputRemove}`, {
         method: 'DELETE'})
         .then(() => alert('Remove user'))
         .catch(error => console.log('ERROR ' + error));
-    getAllUsers();
 };
 
 const updateUser = () => {
-    const inputUpdateId = document.querySelector(".js-inputUpdateId");
-    const inputUpdateName = document.querySelector(".js-inputUpdateName");
-    const inputUpdateAge = document.querySelector(".js-inputUpdateAge");
+    const inputUpdateId = document.querySelector(".js-inputUpdateId").value;
+    const inputUpdateName = document.querySelector(".js-inputUpdateName").value;
+    const inputUpdateAge = document.querySelector(".js-inputUpdateAge").value;
 
     const userToUpdate = {
         id: inputUpdateId,
@@ -124,7 +123,7 @@ const updateUser = () => {
         age: inputUpdateAge,
     };
 
-    fetch(`${apiUrl}:${inputUpdateId}`, {
+    fetch(`${apiUrl}${inputUpdateId}`, {
         method: "PUT",
         body: JSON.stringify(userToUpdate),
         headers: {
