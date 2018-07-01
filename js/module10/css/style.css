@@ -64,5 +64,20 @@ body {
         color: #616161;
     }
 
+.result {
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse; 
+    border: 1px solid #00796b;
+}
+
+th, td {
+    padding: 5px;
+    border-bottom: 1px dashed #00796b;
+    text-align: center;
+}
+
 
 

@@ -51,10 +51,10 @@ const fetchAllUsers = () => {
 const createUsersList = (users) => {
     users = Array.from(users);
     console.log(users);
-    let markup = '';
+    let markup = `<tr class="headerTable"><th>ID</th><th>Name</th><th>Age</th></tr>`;
     //let user = {};
     users.forEach(user => {
-        markup = markup + `<li class="item">id: ${user.id}, name: ${user.name}, age: ${user.age}</li>`;
+        markup = markup + `<tr class="item"><td>${user.id}</td><td>${user.name}</td><td>${user.age}</td></tr>`;
     });
 
     return markup;
