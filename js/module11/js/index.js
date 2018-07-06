@@ -116,6 +116,8 @@ const resetResult = () => {
 
 const handleFormSumit = e => {
     e.preventDefault();
+
+  resetResult();
  
   console.log(inputs);
 
