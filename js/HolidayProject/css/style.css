@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "AcromBold";  
+    src: url("../fonts/AcromBold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+     }
+
+@font-face{
+     font-family: "AcromExtraBold";
+     src: url("../fonts/AcromExtraBold.ttf") format("truetype");
+     font-style: normal; 
+    font-weight: normal; 
+    }
+
+@font-face{
+    font-family: "AcromMedium";
+    src: url("../fonts/AcromMedium.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+    }
+
+@font-face{
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadProRegular.ttf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+    }   
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 848px;
+    margin-top: 33px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "AcromMedium";
+    font-size: 10px;
+}
+
+.phones {
+    margin-left: 23px;
+}
+
+.introduce {
+    margin-top: 98px;
+}
+
+.title {
+    font-family: "MyriadProRegular";
+    font-size: 57px;
+    line-height: 63px;
+    letter-spacing: normal;
+}
+
+.title .negativ {
+    background-color: #000;
+    color: #fff;
+}
+
+.introduceInfo {
+    margin-top: 35px;
+    width: 462px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "AcromBold";
+    font-size: 21px;
+}
+
+.introduceInfoText {
+    width: 362px;
+}
