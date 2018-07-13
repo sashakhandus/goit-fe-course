@@ -22,7 +22,7 @@ const handleFormSumit = e => {
 
 const fetchWeather = city => 
     fetch(
-        `http://api.apixu.com/v1/forecast.json?key=0b4d3de835b7469f8a0173433180907&q=${city}&days=7`,
+        `https://api.apixu.com/v1/forecast.json?key=0b4d3de835b7469f8a0173433180907&q=${city}&days=7`,
     )
     .then(res => res.json())
     .then(data => {
