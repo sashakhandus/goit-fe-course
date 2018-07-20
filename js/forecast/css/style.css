@@ -13,7 +13,7 @@ body {
     margin-top: 50px;
     width: 350px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
     padding: 20px;
     box-shadow: 0px 0px 15px 5px #E6E6E6;
@@ -23,6 +23,7 @@ body {
 @media screen and (min-width: 960px) {
     .form {
         width: 600px;
+        font-size: 24px;
     }
 }
 
@@ -32,27 +33,37 @@ body {
     width: 120px;
     height: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     padding: 3px;
-    border: 3px solid red;
 }
 
 @media screen and (min-width: 960px) {
     .form .input {
         height: 40px;
+        font-size: 18px;
+        padding: 3px;
     }
 }
 
 
 .submit {
     margin-top: 15px;
-    width: 80px;
-    height: 25px;
+    width: 100px;
+    height: 30px;
     background: #F1F8E0;
     border-radius: 3px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     outline: none;
+}
+
+@media screen and (min-width: 960px) {
+    .submit {
+        margin-top: 15px;
+        width: 80px;
+        height: 25px;
+        font-size: 14px;
+    }
 }
 
 .result {
@@ -73,5 +84,12 @@ body {
 .descr {
     margin-bottom: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
+    font-size: 24px;
+}
+
+
+@media screen and (min-width: 960px) {
+    .descr {
+        font-size: 18px;
+    }
 }
