@@ -48,7 +48,7 @@ const handleFormSumit = e => {
 
 const fetchUrl = url =>
     fetch(
-        `http://api.linkpreview.net/?key=${key}&q=https://${url}`
+        `https://api.linkpreview.net/?key=${key}&q=https://${url}`
     )
     .then(res => res.json())
     .then(data => {
