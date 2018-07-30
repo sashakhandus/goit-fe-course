@@ -46,6 +46,7 @@ const handleFormSumit = e => {
     input.value = "";
 }
 
+
 const fetchUrl = url =>
     fetch(
         `https://api.linkpreview.net/?key=${key}&q=https://${url}`
