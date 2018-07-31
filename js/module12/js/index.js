@@ -3,7 +3,7 @@
 let input = document.querySelector('input');
 const form = document.querySelector(".js-form");
 const result = document.querySelector(".js-result");
-const del = document.querySelectorAll(".js-delete");
+//const del = document.querySelectorAll(".js-delete");
 const urls = [];
 let length = localStorage.length;
 
@@ -65,6 +65,18 @@ const showUrl = (newUrl) => {
     const markup = template(newUrl);
     
     result.insertAdjacentHTML('afterbegin', markup); 
+
+    const card = result.querySelector('div');
+    const descrTitle = card.querySelector('.descrTitle');
+    const descr = card.querySelector('.descr');
+
+    if (newUrl.title === '') {
+        descrTitle.remove();
+    };
+
+    if (newUrl.description === '') {
+        descr.remove();
+    };
 } 
 
 const showStorage = () => {
@@ -78,11 +90,18 @@ const delCard = e => {
     e.preventDefault();
 
     const event = e.target;
-    const eventParent = event.parentNode;
-    const eventChildren = eventParent.children;
-    const thisElem = eventChildren[2].textContent.split(' ')[1].slice(8, -1);
-    let newIndex;
-    let length1 = localStorage.length;
+    console.log(event);
+    console.log(!event.classList.contains("cardButton"));
+  
+    if (!event.classList.contains("cardButton")) {
+        return;
+    } else {
+        const eventParent = event.parentNode;
+        //const eventChildren = eventParent.children;
+        const thisUrl = eventParent.querySelector(".descrUrl");
+        const thisElem = thisUrl.textContent.split(' ')[1].slice(8, -1);
+        let newIndex;
+        let length1 = localStorage.length;
 
     for (let i = 0; i < length1; i++) {
        
@@ -107,6 +126,8 @@ const delCard = e => {
     localStorage.removeItem(`app-url${length1 - 1}`);
 
     eventParent.remove();
+
+    };
 }
 
 document.addEventListener("DOMContentLoaded", ready);
