@@ -28,8 +28,8 @@ const handleFormSumit = e => {
 
     if (urls.includes(url)) {
         alert('This url is already in the list!');
-    } else if (!isValidUrl(url)) {
-        alert('This url is not valid!');
+    //} else if (!isValidUrl(url)) {
+        //alert('This url is not valid!');
     } else {
         urls.push(url);
         console.log(urls);

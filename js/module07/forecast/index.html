@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forecoast</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <form class="form js-form">
+        Enter your city: <input type="text" name="city" class="input"></br>
+        <button class="submit">forecast</button>
+    </form>
+
+    <div class="result js-result">
+    </div>
+
+    <template id="card-temp">
+        <div class="card">
+            <p class="descr">{{day}}</p>
+            <p class="descr">Sunrise: {{sunrise}}</p>
+            <p class="descr">Sunset: {{sunset}}</p>
+            <p class="descr">MaxTemp: {{maxtemp}}</p>
+            <p class="descr">MinTemp: {{mintemp}}</p>
+            <p class="descr">Wind: {{wind}}</p>
+            <p class="descr">{{condition}}</p>
+            <img class="img" src="http://{{img}}" alt="" width=""> 
+        </div>
+    </template>
+
+        
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>  
+    <script src="js/index.js"></script>
+</body>
+</html>
