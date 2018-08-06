@@ -1,6 +1,5 @@
-
-//import './templates/cardTemp.hbs';
 import './style.css';
+import cardTpl from './templates/card.hbs';
 
 'use strict';
 
@@ -9,7 +8,7 @@ const form = document.querySelector(".js-form");
 const result = document.querySelector(".js-result");
 const urls = [];
 let length = localStorage.length;
-const Handlebars = require('handlebars');
+//const Handlebars = require('handlebars');
 
 const key = '5b59d33584e6fae9a803d3af560d2c956d877a148f277';
 
@@ -27,7 +26,8 @@ const ready = () => {
 }
 
 const isValidUrl = url => {
-    var objRE = /(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+   // var objRE = /(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+   var objRE = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     return objRE.test(url);
 }
 
@@ -43,8 +43,6 @@ const handleFormSumit = e => {
         alert('This url is not valid!');
     } else {
         urls.push(url);
-        console.log(urls);
-        console.log(length);
         localStorage.setItem(`app-url${lengthStorage}`, JSON.stringify(url));
         fetchUrl(url);
     };
@@ -72,10 +70,8 @@ const fetchUrl = url =>
     .catch(err => console.log(err));
 
 const showUrl = (newUrl) => {
-    const source = document.querySelector('#card-temp').innerHTML.trim();
-    const template = Handlebars.compile(source);   
-    const markup = template(newUrl);
-    
+    const markup = cardTpl(newUrl);
+
     result.insertAdjacentHTML('afterbegin', markup);
 
     const card = result.querySelector('div');
