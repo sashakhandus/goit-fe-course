@@ -15,8 +15,8 @@ const key = '5b59d33584e6fae9a803d3af560d2c956d877a148f277';
 
 const ready = () => {
 //localStorage.clear();
-    if (localStorage.length > 1) {
-        for (let i = 1; i < localStorage.length; i++) {
+    if (localStorage.length > 0) {
+        for (let i = 0; i < localStorage.length; i++) {
             const urlfromLs = JSON.parse(localStorage.getItem(`app-url${i}`)); 
             urls.push(urlfromLs);
         };
@@ -89,7 +89,7 @@ const showUrl = (newUrl) => {
 } 
 
 const showStorage = () => {
-    for (let i = 1; i < length; i ++ ) {
+    for (let i = 0; i < length; i ++ ) {
         const urlfromLs= JSON.parse(localStorage.getItem(`app-url${i}`)); 
         fetchUrl(urlfromLs);
     }
@@ -111,7 +111,7 @@ const delCard = e => {
         let newIndex;
         let length1 = localStorage.length;
 
-    for (let i = 1; i < length1; i++) {
+    for (let i = 0; i < length1; i++) {
        
         let value = localStorage.getItem(`app-url${i}`);
         let newValue = value.slice(1, -1);
