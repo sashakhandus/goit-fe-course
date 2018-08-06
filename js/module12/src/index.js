@@ -1,39 +1,48 @@
+import './style.css';
+import cardTpl from './templates/card.hbs';
+
 'use strict';
 
 let input = document.querySelector('input');
 const form = document.querySelector(".js-form");
 const result = document.querySelector(".js-result");
-//const del = document.querySelectorAll(".js-delete");
 const urls = [];
 let length = localStorage.length;
+//const Handlebars = require('handlebars');
 
 const key = '5b59d33584e6fae9a803d3af560d2c956d877a148f277';
 
+
 const ready = () => {
-    if (localStorage.length !== 0) {
+//localStorage.clear();
+    if (localStorage.length > 1) {
+        for (let i = 1; i < localStorage.length; i++) {
+            const urlfromLs = JSON.parse(localStorage.getItem(`app-url${i}`)); 
+            urls.push(urlfromLs);
+        };
         console.log(localStorage.length);
         showStorage();
     }
 }
 
 const isValidUrl = url => {
-    var objRE = /(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+   var objRE = /(^https?:\/\/)?[a-z0-9~_\-\.]+\.[a-z]{2,9}(\/|:|\?[!-~]*)?$/i;
+   //var objRE = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     return objRE.test(url);
 }
 
 const handleFormSumit = e => {
     e.preventDefault();
+
     let url = input.value;
     let lengthStorage = localStorage.length;
 
     if (urls.includes(url)) {
         alert('This url is already in the list!');
-    //} else if (!isValidUrl(url)) {
-        //alert('This url is not valid!');
+    } else if (!isValidUrl(url)) {
+        alert('This url is not valid!');
     } else {
         urls.push(url);
-        console.log(urls);
-        console.log(lengthStorage);
         localStorage.setItem(`app-url${lengthStorage}`, JSON.stringify(url));
         fetchUrl(url);
     };
@@ -55,16 +64,15 @@ const fetchUrl = url =>
             img: data.image,
             url: data.url,
         }
+
         showUrl(newUrl);
     })
     .catch(err => console.log(err));
 
 const showUrl = (newUrl) => {
-    const source = document.querySelector('#card-temp').innerHTML.trim();
-    const template = Handlebars.compile(source);  
-    const markup = template(newUrl);
-    
-    result.insertAdjacentHTML('afterbegin', markup); 
+    const markup = cardTpl(newUrl);
+
+    result.insertAdjacentHTML('afterbegin', markup);
 
     const card = result.querySelector('div');
     const descrTitle = card.querySelector('.descrTitle');
@@ -77,10 +85,11 @@ const showUrl = (newUrl) => {
     if (newUrl.description === '') {
         descr.remove();
     };
+    console.log(urls);
 } 
 
 const showStorage = () => {
-    for (let i = 0; i < length; i ++ ) {
+    for (let i = 1; i < length; i ++ ) {
         const urlfromLs= JSON.parse(localStorage.getItem(`app-url${i}`)); 
         fetchUrl(urlfromLs);
     }
@@ -88,33 +97,31 @@ const showStorage = () => {
 
 const delCard = e => {
     e.preventDefault();
+    console.log(e);
 
     const event = e.target;
     console.log(event);
-    console.log(!event.classList.contains("cardButton"));
   
     if (!event.classList.contains("cardButton")) {
         return;
     } else {
         const eventParent = event.parentNode;
-        //const eventChildren = eventParent.children;
         const thisUrl = eventParent.querySelector(".descrUrl");
         const thisElem = thisUrl.textContent.split(' ')[1].slice(8, -1);
         let newIndex;
         let length1 = localStorage.length;
 
-    for (let i = 0; i < length1; i++) {
+    for (let i = 1; i < length1; i++) {
        
         let value = localStorage.getItem(`app-url${i}`);
-        console.log(`app-url${i}`, value);
         let newValue = value.slice(1, -1);
-        console.log(newValue);
-        console.log(thisElem.includes(newValue));
 
        if (thisElem.includes(newValue)) {
            localStorage.removeItem(`app-url${i}`);
            newIndex = i;
-           console.log(i);
+
+           let indexRemoveUrls = urls.indexOf(newValue);
+           urls.splice(indexRemoveUrls, 1);
        };
     };
 
@@ -126,7 +133,6 @@ const delCard = e => {
     localStorage.removeItem(`app-url${length1 - 1}`);
 
     eventParent.remove();
-
     };
 }
 
